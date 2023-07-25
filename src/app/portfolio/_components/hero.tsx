@@ -37,21 +37,23 @@ const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
       <Stack className='flex-1'>
         <Stack className='flex-1 justify-center'>
           <p className='font-medium text-xl text-slate-500'>hello, I am</p>
-          <h1
-            className={classNames(
-              interFont.className,
-              'font-black sm:text-[80px] lg:text-[96px] leading-[1]'
-            )}
-          >
-            <span className='text-slate-700'>PAOLO</span>
-            <span className='text-slate-900'>JULIAN</span>
-          </h1>
-          <p className='font-medium text-slate-600 text-xl tracking-[28.2px]'>
-            SOFTWARE ENGINEER
-          </p>
+          <Stack className='md:ml-8'>
+            <h1
+              className={classNames(
+                interFont.className,
+                'font-black text-[80px] lg:text-[96px] leading-[1]'
+              )}
+            >
+              <span className='text-slate-700 block md:inline'>PAOLO</span>
+              <span className='text-slate-900'>JULIAN</span>
+            </h1>
+            <p className='font-medium text-slate-600 text-lg lg:text-xl tracking-[5px] md:tracking-[22.5px] lg:tracking-[28.2px]'>
+              SOFTWARE ENGINEER
+            </p>
+          </Stack>
         </Stack>
 
-        <Row className='space-x-10'>
+        <Row className='justify-between md:justify-normal md:space-x-10'>
           {contactItems.map((item) => (
             <Link href={item.link} key={item.title}>
               <span className='font-medium text-slate-700 text-sm'>
