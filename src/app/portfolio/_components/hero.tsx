@@ -28,16 +28,18 @@ const contactItems: { title: string; link: string }[] = [
 
 const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
   return (
-    <Stack className='relative min-h-screen h-full p-10'>
-      <div className='absolute top-0 right-10'>
-        <div className='absolute right-0 top-12 border-t border-r border-slate-600 h-60 w-60'></div>
-        <div className='absolute right-2 top-10 border-t border-r border-slate-600 h-48 w-72'></div>
+    <Stack className='min-h-screen h-full py-10'>
+      <div className='absolute top-10 right-10'>
+        <div className='absolute right-0 top-2 border-t border-r border-slate-600 h-60 w-60'></div>
+        <div className='absolute right-2 top-0 border-t border-r border-slate-600 h-48 w-72'></div>
       </div>
 
       <Stack className='flex-1'>
         <Stack className='flex-1 justify-center'>
-          <p className='font-medium text-xl text-slate-500'>hello, I am</p>
-          <Stack className='md:ml-8'>
+          <p className='font-medium text-xl text-slate-500 -ml-4'>
+            hello, I am
+          </p>
+          <Stack>
             <h1
               className={classNames(
                 interFont.className,
