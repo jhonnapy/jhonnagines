@@ -1,13 +1,12 @@
 import React, { FunctionComponent } from 'react';
+import HeroSection from './_components/hero';
 
 export type PortfolioPageProps = {
-    // No Props
+  // No Props
 };
 
 const PortfolioPage: FunctionComponent<PortfolioPageProps> = (props) => {
-  return (
-    <div className=""></div>
-  );
-}
+  return <HeroSection />;
+};
 
 export default PortfolioPage;

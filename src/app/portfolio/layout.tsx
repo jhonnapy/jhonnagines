@@ -1,4 +1,5 @@
-import './globals.css';
+import classNames from 'classnames';
+import './page.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
@@ -15,8 +16,13 @@ export default function PortfolioLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className={font.className}>{children}</body>
-    </html>
+    <div
+      className={classNames(
+        font.className,
+        'bg-[#ECE8E1] max-w-screen-xl mx-auto'
+      )}
+    >
+      {children}
+    </div>
   );
 }
