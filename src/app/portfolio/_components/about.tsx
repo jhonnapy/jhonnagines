@@ -2,6 +2,7 @@ import Stack from '@/_components/layouts/stack';
 import React, { FunctionComponent } from 'react';
 import SectionHeading from './common/section-heading';
 import TextHighlight from './common/text-highlight';
+import CTAButton from './common/cta-button';
 
 export type AboutSectionProps = {
   // No Props

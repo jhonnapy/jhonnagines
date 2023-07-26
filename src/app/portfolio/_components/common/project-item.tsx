@@ -44,7 +44,7 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
 
         <Row
           className={classNames(
-            'space-x-2',
+            'space-x-2 flex-wrap',
             variant === 'left-image' ? 'text-left' : 'justify-end'
           )}
         >
