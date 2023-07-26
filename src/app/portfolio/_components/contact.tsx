@@ -15,8 +15,8 @@ export type ContactSectionProps = {
 
 const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
   return (
-    <Row className='w-full h-fit items-center space-x-12'>
-      <Stack className='py-12 space-y-8 flex-1'>
+    <Row className='w-full h-fit items-center py-24 space-x-12'>
+      <Stack className='space-y-8 flex-1'>
         <div>
           <SectionHeading>want to work with me?</SectionHeading>
           <h3
@@ -47,28 +47,37 @@ const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
           </Stack>
         </form>
       </Stack>
-      <Stack className='h-full justify-center space-y-8 flex-1'>
-        <Stack className='text-slate-600 font-medium'>
-          <h4 className='text-sm font-medium text-slate-500 mb-1'>
-            availability
-          </h4>
-          <p>Monday - Friday</p>
-          <p>9AM - 6PM</p>
-          <p>Weekends</p>
-          <p>Emails only</p>
+      <Stack className='h-full justify-center flex-1 space-y-16'>
+        <Stack className='space-y-6 flex-1'>
+          <Stack className='text-slate-600'>
+            <h4 className='text-sm font-medium text-slate-500 mb-1'>
+              availability
+            </h4>
+            <p>Monday - Friday</p>
+            <p>9AM - 6PM</p>
+            <p>Weekends</p>
+            <p>Emails only</p>
+          </Stack>
+          <Stack className='text-slate-600'>
+            <h4 className='text-sm font-medium text-slate-500 mb-1'>address</h4>
+            <p>Upper Dagsian</p>
+            <p>Baguio City</p>
+            <p>Philippines</p>
+            <p>2600</p>
+          </Stack>
+          <Stack className='text-slate-600'>
+            <h4 className='text-sm font-medium text-slate-500 mb-1'>support</h4>
+            <p>paolojulian.personal@gmail.com</p>
+            <p>(+63) 927 948 8654</p>
+          </Stack>
         </Stack>
-        <Stack className='text-slate-600 font-medium'>
-          <h4 className='text-sm font-medium text-slate-500 mb-1'>address</h4>
-          <p>Upper Dagsian</p>
-          <p>Baguio City</p>
-          <p>Philippines</p>
-          <p>2600</p>
-        </Stack>
-        <Stack className='text-slate-600 font-medium'>
-          <h4 className='text-sm font-medium text-slate-500 mb-1'>support</h4>
-          <p>paolojulian.personal@gmail.com</p>
-          <p>(+63) 927 948 8654</p>
-        </Stack>
+        <footer>
+          <p className='text-sm text-slate-500'>
+            Copyright @ 2017-2023 Paolo Vincent Julian.
+            <br />
+            All rights reserved.
+          </p>
+        </footer>
       </Stack>
     </Row>
   );
