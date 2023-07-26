@@ -19,7 +19,7 @@ export default function PortfolioLayout({
     <div
       className={classNames(
         font.className,
-        'bg-[#ECE8E1] max-w-screen-lg mx-auto text-slate-700'
+        'bg-main max-w-screen-lg mx-auto text-slate-700'
       )}
     >
       {children}
