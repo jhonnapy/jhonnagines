@@ -1,6 +1,6 @@
 import Row from '@/_components/layouts/row';
 import Stack from '@/_components/layouts/stack';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
 import ProjectImage from '../common/project-image';
 import ProjectTitle from '../common/project-title';
 import classNames from 'classnames';
@@ -14,6 +14,13 @@ const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
   onClose,
   isOpen,
 }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('modal--open');
+    } else {
+      document.body.classList.remove('modal--open');
+    }
+  }, [isOpen]);
   return (
     // container
     <div
@@ -21,7 +28,7 @@ const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
         'app-modal fixed inset-0 w-screen h-screen z-50',
         'transition-opacity',
         isOpen
-          ? 'opacity-1 pointer-events-auto'
+          ? 'app-modal--open opacity-1 pointer-events-auto'
           : 'opacity-0 pointer-events-none'
       )}
     >
@@ -55,7 +62,7 @@ const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
             parking lots, hotels, and other spaces. The app seamlessly combines
             the capabilities of a floor planner and a seat reservation system,
             making it an indispensable tool for event organizers, hospitality
-            industry professionals, and facility managers.  Key features of the
+            industry professionals, and facility managers. Key features of the
             app include: Flexible Floor Planning Tools: The app provides an
             intuitive and user-friendly interface with flexible floor planning
             tools. Users can create customized seating layouts for events such
