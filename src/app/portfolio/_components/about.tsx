@@ -1,9 +1,9 @@
-import Stack from '@/components/layouts/stack';
+import Stack from '@/_components/layouts/stack';
 import React, { FunctionComponent } from 'react';
 import SectionHeading from './common/section-heading';
 import TextHighlight from './common/text-highlight';
 import CTAButton from './common/cta-button';
-import Row from '@/components/layouts/row';
+import Row from '@/_components/layouts/row';
 
 export type AboutSectionProps = {
   // No Props

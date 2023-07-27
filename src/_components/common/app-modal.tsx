@@ -1,6 +1,6 @@
 'use client';
-import Row from '@/components/layouts/row';
-import Stack from '@/components/layouts/stack';
+import Row from '@/_components/layouts/row';
+import Stack from '@/_components/layouts/stack';
 import React, { FunctionComponent, useEffect } from 'react';
 import classNames from 'classnames';
 

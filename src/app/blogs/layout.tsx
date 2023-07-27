@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
-import Row from '@/components/layouts/row';
+import Row from '@/_components/layouts/row';
 import NavIconButton from './_components/nav-icon-btn';
 import HomeIcon from './_components/icons/home-icon';
 import BloggerIcon from './_components/icons/blogger-icon';
 import AppsIcon from './_components/icons/apps-icon';
-import Stack from '@/components/layouts/stack';
+import Stack from '@/_components/layouts/stack';
 
 const font = Montserrat({ subsets: ['latin'] });
 

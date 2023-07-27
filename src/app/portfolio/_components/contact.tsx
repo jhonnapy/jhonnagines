@@ -3,9 +3,9 @@ import SectionHeading from './common/section-heading';
 import { Inter } from 'next/font/google';
 import classNames from 'classnames';
 import TextInput from './form/text-input';
-import Stack from '@/components/layouts/stack';
+import Stack from '@/_components/layouts/stack';
 import CTAButton from './common/cta-button';
-import Row from '@/components/layouts/row';
+import Row from '@/_components/layouts/row';
 
 const interFont = Inter({ subsets: ['latin'] });
 
