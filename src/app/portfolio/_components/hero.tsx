@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import { Inter } from 'next/font/google';
 import classNames from 'classnames';
-import Stack from '@/_components/layouts/stack';
-import Row from '@/_components/layouts/row';
+import Stack from '@/components/layouts/stack';
+import Row from '@/components/layouts/row';
 import Link from 'next/link';
 
 const interFont = Inter({ subsets: ['latin'] });

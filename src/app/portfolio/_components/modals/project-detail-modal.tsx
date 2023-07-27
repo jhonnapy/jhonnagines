@@ -1,8 +1,8 @@
-import Stack from '@/_components/layouts/stack';
+import Stack from '@/components/layouts/stack';
 import React, { FunctionComponent } from 'react';
 import ProjectImage from '../common/project-image';
 import ProjectTitle from '../common/project-title';
-import AppModal, { AppModalProps } from '@/_components/common/app-modal';
+import AppModal, { AppModalProps } from '@/components/common/app-modal';
 
 export type ProjectDetailsModalProps = {
   // no props

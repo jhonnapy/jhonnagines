@@ -1,5 +1,5 @@
 'use client';
-import Stack from '@/_components/layouts/stack';
+import Stack from '@/components/layouts/stack';
 import React, { FunctionComponent, useState } from 'react';
 import SectionHeading from './common/section-heading';
 import ProjectItem from './common/project-item';

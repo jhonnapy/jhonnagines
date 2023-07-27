@@ -1,5 +1,6 @@
-import Row from '@/_components/layouts/row';
-import Stack from '@/_components/layouts/stack';
+'use client';
+import Row from '@/components/layouts/row';
+import Stack from '@/components/layouts/stack';
 import React, { FunctionComponent, useEffect } from 'react';
 import classNames from 'classnames';
 
@@ -21,24 +22,23 @@ const AppModal: FunctionComponent<AppModalProps> = ({
       document.body.classList.remove('modal--open');
     }
   }, [isOpen]);
+
   return (
     // container
     <div
       className={classNames(
-        'app-modal fixed inset-0 w-screen h-screen z-50',
-        'transition-opacity',
-        isOpen
-          ? 'app-modal--open opacity-1 pointer-events-auto'
-          : 'opacity-0 pointer-events-none'
+        'fixed inset-0 w-screen h-screen z-50',
+        'transition-opacity backdrop-blur-sm',
+        isOpen ? 'opacity-1' : 'opacity-0 pointer-events-none'
       )}
     >
       {/* overlay */}
-      <div className='absolute inset-0 pointer-events-none bg-slate-900/60'></div>
+      <div className='absolute w-full h-full inset-0 bg-slate-900/30'></div>
 
       {/* modal */}
       <Stack
         className={classNames(
-          'absolute inset-0 max-w-screen-lg w-full mx-auto h-full transition-transform',
+          'absolute inset-0 max-w-screen-lg w-full h-full mx-auto transition-transform',
           isOpen ? 'translate-y-0' : 'translate-y-full'
         )}
       >

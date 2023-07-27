@@ -1,5 +1,5 @@
-import Row from '@/_components/layouts/row';
-import Stack from '@/_components/layouts/stack';
+import Row from '@/components/layouts/row';
+import Stack from '@/components/layouts/stack';
 import React, { FunctionComponent } from 'react';
 import HashTag from './hashtag';
 import classNames from 'classnames';
