@@ -1,0 +1,21 @@
+// import dayjs from 'dayjs';
+import React, { FunctionComponent, useMemo } from 'react';
+
+export type AppTimeProps = {
+  dateTime: string;
+  format?: string;
+};
+
+const AppTime: FunctionComponent<AppTimeProps> = ({
+  dateTime,
+  format = 'DD-MMM-YYYY hh:mm A',
+}) => {
+  // const formattedDateTime = useMemo(
+  //   () => dayjs(dateTime).format(format),
+  //   [dateTime]
+  // );
+  const formattedDateTime = dateTime;
+  return <time dateTime={dateTime}>{formattedDateTime}</time>;
+};
+
+export default AppTime;

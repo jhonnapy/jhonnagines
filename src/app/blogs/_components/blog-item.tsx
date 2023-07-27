@@ -1,5 +1,6 @@
-import Row from '@/components/layouts/row';
-import Stack from '@/components/layouts/stack';
+import AppTime from '@/_components/common/app-time';
+import Row from '@/_components/layouts/row';
+import Stack from '@/_components/layouts/stack';
 import classNames from 'classnames';
 import Link from 'next/link';
 import React, { FunctionComponent } from 'react';
@@ -28,9 +29,14 @@ const BlogItem: FunctionComponent<BlogItemProps> = (props) => {
             amet officia sit aliquip qui nostrud. Proident adipisicing aliquip
             sit nisi id veniam consequat dolore commodo.
           </p>
-          <span className='mt-2 font-medium text-sm text-slate-500'>
-            learn more...
-          </span>
+          <Row className='justify-between items-end'>
+            <span className='mt-2 font-medium text-sm text-slate-500'>
+              learn more...
+            </span>
+            <div className='text-slate-400 text-sm italic'>
+              <AppTime dateTime='05-Jul-2023 09:00 AM' />
+            </div>
+          </Row>
 
           <div
             className={classNames(

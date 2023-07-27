@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import BlogItem from './_components/blog-item';
-import Stack from '@/components/layouts/stack';
-import Row from '@/components/layouts/row';
+import Stack from '@/_components/layouts/stack';
+import Row from '@/_components/layouts/row';
 
 export type BlogsPageProps = {
   // No Props
