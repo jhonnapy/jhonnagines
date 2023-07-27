@@ -47,7 +47,7 @@ export default function PortfolioLayout({
           <div className='hidden lg:block w-[300px] h-screen sticky top-0 right-0 border-l border-slate-400'>
             <Stack>
               <div className='py-8 relative'>
-                <div className='w-[110%] absolute -left-5 bottom-0 border-b border-b-slate-400'></div>
+                <div className='w-full absolute -right-5 bottom-0 border-b border-b-slate-400'></div>
                 <Row className='justify-end items-center space-x-4'>
                   <Stack className='items-end'>
                     <h4 className='font-medium'>Paolo Vincent Julian</h4>
