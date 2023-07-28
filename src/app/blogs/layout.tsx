@@ -30,7 +30,7 @@ export default function PortfolioLayout({
         )}
       >
         <Row>
-          <aside className='sticky top-0 left-0 h-screen border-r border-slate-400'>
+          <aside className='sticky top-0 left-0 h-screen border-r border-slate-400 z-30'>
             <nav className='flex flex-col space-y-2 justify-center h-full p-2'>
               <NavIconButton name='Home'>
                 <HomeIcon className='text-slate-700' />
@@ -47,7 +47,7 @@ export default function PortfolioLayout({
           <div className='hidden lg:block w-[300px] h-screen sticky top-0 right-0 border-l border-slate-400'>
             <Stack>
               <div className='py-8 relative'>
-                <div className='w-full absolute -right-5 bottom-0 border-b border-b-slate-400'></div>
+                <div className='w-3/5 absolute right-0 bottom-0 border-b border-b-slate-400'></div>
                 <Row className='justify-end items-center space-x-4'>
                   <Stack className='items-end'>
                     <h4 className='font-medium'>Paolo Vincent Julian</h4>

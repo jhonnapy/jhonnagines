@@ -20,8 +20,8 @@ const NavIconButton: FunctionComponent<NavIconButtonProps> = ({
         <div className='group-active:scale-90'>{children}</div>
         <div
           className={classNames(
-            'absolute ml-1 left-full transition-opacity -translate-y-1/2 top-1/2 px-4 py-2 bg-gray-800/95 text-gray-50 rounded-lg',
-            'opacity-0 group-hover:opacity-100',
+            'absolute ml-1 left-full transition-opacity -translate-y-1/2 top-1/2 px-4 py-2 bg-gray-800/70 text-gray-50',
+            'opacity-0 group-hover:opacity-100 z-30',
             'pointer-events-none select-none'
           )}
         >
