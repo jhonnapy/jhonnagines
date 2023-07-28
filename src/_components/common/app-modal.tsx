@@ -40,10 +40,7 @@ const AppModal: FunctionComponent<AppModalProps> = ({
   return (
     // container
     <dialog
-      className={classNames(
-        'max-w-screen-md w-full overflow-hidden',
-        styles['app-modal']
-      )}
+      className={classNames('max-w-screen-md w-full', styles['app-modal'])}
       ref={dialogRef}
       style={{ maxWidth: '768px', height: '100%' }}
     >
@@ -51,6 +48,7 @@ const AppModal: FunctionComponent<AppModalProps> = ({
         className={classNames('h-full transition-transform duration-1000')}
         style={{
           transform: isOpen ? 'translateY(0px)' : 'translateY(100%)',
+          maxHeight: '100%',
         }}
       >
         <Row className='justify-end'>
@@ -61,7 +59,10 @@ const AppModal: FunctionComponent<AppModalProps> = ({
             exit
           </button>
         </Row>
-        <div className='w-full bg-main overflow-y-scroll flex-1 shadow-md'>
+        <div
+          className='w-full bg-main overflow-y-scroll flex-1 shadow-md'
+          style={{ overflowY: 'scroll' }}
+        >
           {children}
         </div>
       </Stack>
