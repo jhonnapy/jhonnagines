@@ -7,8 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-montserrat)'],
+      },
       colors: {
-        'main': '#ECE8E1',
+        main: '#ECE8E1',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -1,14 +1,11 @@
 import classNames from 'classnames';
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
 import Row from '@/_components/layouts/row';
 import NavIconButton from './_components/nav-icon-btn';
 import HomeIcon from './_components/icons/home-icon';
 import BloggerIcon from './_components/icons/blogger-icon';
 import AppsIcon from './_components/icons/apps-icon';
 import Stack from '@/_components/layouts/stack';
-
-const font = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Blogs | Paolo Julian',
@@ -24,7 +21,6 @@ export default function PortfolioLayout({
     <>
       <div
         className={classNames(
-          font.className,
           'bg-main max-w-screen-xl mx-auto text-slate-700',
           'relative'
         )}

@@ -1,8 +1,9 @@
+import classNames from 'classnames';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
-const font = Montserrat({ subsets: ['latin'] });
+const font = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={font.className}>{children}</body>
+      <body className={classNames(`${font.variable} font-sans`)}>
+        {children}
+      </body>
     </html>
   );
 }
