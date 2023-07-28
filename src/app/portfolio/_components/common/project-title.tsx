@@ -4,7 +4,7 @@ import React, { FunctionComponent, HtmlHTMLAttributes } from 'react';
 type Sizes = 'base' | 'lg';
 
 const fontSizes: Record<Sizes, string> = {
-  base: 'text-2xl',
+  base: 'text-3xl',
   lg: 'text-5xl',
 };
 
@@ -20,7 +20,7 @@ const ProjectTitle: FunctionComponent<ProjectTitleProps> = ({
     <h3
       {...props}
       className={classNames(
-        'font-semibold text-slate-700',
+        'font-bold text-slate-700',
         fontSizes[size]
       )}
     ></h3>

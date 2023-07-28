@@ -54,7 +54,7 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
             >
               <ProjectTitle>{title}</ProjectTitle>
             </div>
-            <p className='text-base'>{description}</p>
+            <p className='text-base text-slate-500'>{description}</p>
 
             <Row
               className={classNames(

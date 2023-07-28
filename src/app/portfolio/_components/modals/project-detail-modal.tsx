@@ -25,8 +25,8 @@ const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
             >
               Floor Planner and Reservation
             </h3>
-            <div className='border-b border-slate-400 w-[70%] absolute -left-5 -bottom-1'></div>
-            <div className='border-b border-slate-400 w-[90%] absolute left-5 -bottom-3'></div>
+            <div className='border-b border-slate-400 w-[70%] absolute -left-5 -bottom-2'></div>
+            <div className='border-b border-slate-400 w-[90%] absolute left-5 -bottom-4'></div>
           </Stack>
           <Row className='w-full justify-center bg-slate-50'>
             <ProjectImage />
