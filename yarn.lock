@@ -1643,6 +1643,13 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+merge-refs@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/merge-refs/-/merge-refs-1.2.1.tgz#abddc800375395a4a4eb5c45ebf2a52557fdbe34"
+  integrity sha512-pRPz39HQz2xzHdXAGvtJ9S8aEpNgpUjzb5yPC3ytozodmsHg+9nqgRs7/YOmn9fM/TLzntAC8AdGTidKxOq9TQ==
+  dependencies:
+    "@types/react" "*"
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"

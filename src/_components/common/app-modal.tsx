@@ -1,4 +1,3 @@
-'use client';
 import styles from './app-modal.module.css';
 import Row from '@/_components/layouts/row';
 import Stack from '@/_components/layouts/stack';
@@ -25,6 +24,7 @@ const AppModal: FunctionComponent<AppModalProps> = ({
 
   const closeModal = useCallback(() => {
     dialogRef.current?.close();
+    document.body.classList.remove('modal--open');
     onClose();
   }, [onClose]);
 
@@ -33,7 +33,6 @@ const AppModal: FunctionComponent<AppModalProps> = ({
       document.body.classList.add('modal--open');
       dialogRef.current?.showModal();
     } else {
-      document.body.classList.remove('modal--open');
       closeModal();
     }
   }, [isOpen, closeModal]);

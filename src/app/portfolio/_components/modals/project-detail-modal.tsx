@@ -3,6 +3,8 @@ import React, { FunctionComponent } from 'react';
 import ProjectImage from '../common/project-image';
 import ProjectTitle from '../common/project-title';
 import AppModal, { AppModalProps } from '@/_components/common/app-modal';
+import classNames from 'classnames';
+import Row from '@/_components/layouts/row';
 
 export type ProjectDetailsModalProps = {
   // no props
@@ -13,12 +15,23 @@ const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
 }) => {
   return (
     <AppModal {...props}>
-      <Stack className='items-center space-y-8 p-16'>
-        <Stack className='text-center space-y-4'>
-          <h2 className='text-slate-500'>project overview</h2>
-          <ProjectImage />
+      <Stack className='space-y-16 p-16'>
+        <Stack className='space-y-16'>
+          <Stack className='relative'>
+            <h2 className='text-slate-500 -ml-4'>project overview</h2>
+            <h3
+              {...props}
+              className={classNames('font-bold text-4xl text-slate-700')}
+            >
+              Floor Planner and Reservation
+            </h3>
+            <div className='border-b border-slate-400 w-[70%] absolute -left-5 -bottom-1'></div>
+            <div className='border-b border-slate-400 w-[90%] absolute left-5 -bottom-3'></div>
+          </Stack>
+          <Row className='w-full justify-center bg-slate-50'>
+            <ProjectImage />
+          </Row>
         </Stack>
-        <ProjectTitle>Floor Planner and Reservation</ProjectTitle>
         <p>
           A Floor Planner with Seat Reservation app is a versatile mobile and
           web-based application that caters to diverse needs, including planning

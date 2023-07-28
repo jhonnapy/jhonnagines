@@ -6,7 +6,7 @@ export type HashTagProps = {
 
 const HashTag: FunctionComponent<HashTagProps> = ({ children, ...props }) => {
   return (
-    <span {...props} className='text-base font-medium text-blue-500 italic'>
+    <span {...props} className='text-base font-medium text-red-500 italic'>
       #{children}
     </span>
   );
