@@ -1,7 +1,6 @@
 import Stack from '@/_components/layouts/stack';
 import React, { FunctionComponent, useEffect, useRef } from 'react';
 import ProjectImage from '../common/project-image';
-import ProjectTitle from '../common/project-title';
 import AppModal, { AppModalProps } from '@/_components/common/app-modal';
 import classNames from 'classnames';
 import Row from '@/_components/layouts/row';
@@ -52,7 +51,7 @@ const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
               <div className='border-b border-slate-400 w-[90%] absolute left-5 -bottom-4'></div>
             </Stack>
             <Row className='w-full justify-center bg-slate-50'>
-              <ProjectImage />
+              <ProjectImage alt={project.name} src={project.image?.url} />
             </Row>
           </Stack>
           <div>

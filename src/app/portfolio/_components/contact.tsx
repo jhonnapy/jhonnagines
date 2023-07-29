@@ -24,7 +24,7 @@ const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
           <SectionHeading>want to work with me?</SectionHeading>
           <h3
             className={classNames(
-              'uppercase font-black text-[60px] leading-[1] -ml-4',
+              'uppercase font-black text-[60px] leading-[1] -ml-4 pr-5',
               interFont.className
             )}
           >
@@ -32,7 +32,7 @@ const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
           </h3>
         </div>
         <form className='relative px-8'>
-          <Stack className='w-[320px] space-y-8'>
+          <Stack className='w-[330px] space-y-8'>
             <Stack className='space-y-4'>
               <h4 className='text-sm font-medium text-slate-500'>
                 feel free to contact me and I will get back to you as soon as I

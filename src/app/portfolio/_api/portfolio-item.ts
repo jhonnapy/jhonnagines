@@ -9,6 +9,9 @@ export async function getPortfolioItems() {
             content
             description
             tags
+            image {
+              url
+            }
           }
       }
     }

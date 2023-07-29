@@ -25,7 +25,9 @@ const ProjectItemContext = createContext<IPortfolioItem>({
   name: '',
   content: '',
   description: '',
-  image: '',
+  image: {
+    url: '',
+  },
   tags: [],
 });
 export const useProjectItemContext = () => useContext(ProjectItemContext);
@@ -38,6 +40,7 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
 
   const handleOpenDetails = () => setOpenDetails(true);
   const handleCloseDetails = () => setOpenDetails(false);
+  console.log({ project });
 
   return (
     <ProjectItemContext.Provider value={project}>
@@ -48,7 +51,7 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
           )}
         >
           <div onClick={handleOpenDetails}>
-            <ProjectImage />
+            <ProjectImage alt={project.name} src={project.image?.url} />
           </div>
           <Stack
             className={classNames(
