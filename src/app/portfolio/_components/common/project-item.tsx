@@ -1,26 +1,37 @@
 'use client';
 import Row from '@/_components/layouts/row';
 import Stack from '@/_components/layouts/stack';
-import React, { FunctionComponent, useState } from 'react';
+import React, {
+  FunctionComponent,
+  createContext,
+  useContext,
+  useState,
+} from 'react';
 import HashTag from './hashtag';
 import classNames from 'classnames';
 import ProjectImage from './project-image';
 import ProjectTitle from './project-title';
 import ProjectDetailsModal from '../modals/project-detail-modal';
+import { IPortfolioItem } from '../../_contentful';
 
 type ProjectItemVariants = 'left-image' | 'right-image';
 
 export type ProjectItemProps = {
-  description: string;
-  hashtags: string[];
-  title: string;
+  project: IPortfolioItem;
   variant?: ProjectItemVariants;
 };
 
+const ProjectItemContext = createContext<IPortfolioItem>({
+  name: '',
+  content: '',
+  description: '',
+  image: '',
+  tags: [],
+});
+export const useProjectItemContext = () => useContext(ProjectItemContext);
+
 const ProjectItem: FunctionComponent<ProjectItemProps> = ({
-  description,
-  hashtags,
-  title,
+  project,
   variant = 'left-image',
 }) => {
   const [openDetails, setOpenDetails] = useState(false);
@@ -29,7 +40,7 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
   const handleCloseDetails = () => setOpenDetails(false);
 
   return (
-    <>
+    <ProjectItemContext.Provider value={project}>
       <div>
         <Row
           className={classNames(
@@ -52,9 +63,9 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
               )}
               onClick={handleOpenDetails}
             >
-              <ProjectTitle>{title}</ProjectTitle>
+              <ProjectTitle>{project.name}</ProjectTitle>
             </div>
-            <p className='text-base text-slate-500'>{description}</p>
+            <p className='text-base text-slate-500'>{project.description}</p>
 
             <Row
               className={classNames(
@@ -62,7 +73,7 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
                 variant === 'left-image' ? 'text-left' : 'justify-end'
               )}
             >
-              {hashtags.map((tag) => (
+              {project.tags.map((tag) => (
                 <HashTag key={tag}>{tag}</HashTag>
               ))}
             </Row>
@@ -81,7 +92,7 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
           onClose={handleCloseDetails}
         />
       </div>
-    </>
+    </ProjectItemContext.Provider>
   );
 };
 

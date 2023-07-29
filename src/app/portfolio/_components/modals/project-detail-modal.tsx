@@ -5,6 +5,7 @@ import ProjectTitle from '../common/project-title';
 import AppModal, { AppModalProps } from '@/_components/common/app-modal';
 import classNames from 'classnames';
 import Row from '@/_components/layouts/row';
+import { useProjectItemContext } from '../common/project-item';
 
 export type ProjectDetailsModalProps = {
   // no props
@@ -13,6 +14,8 @@ export type ProjectDetailsModalProps = {
 const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
   ...props
 }) => {
+  const project = useProjectItemContext();
+
   return (
     <AppModal {...props}>
       <Stack className='space-y-16 p-16'>
@@ -20,7 +23,7 @@ const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
           <Stack className='relative'>
             <h2 className='text-slate-500 -ml-4'>project overview</h2>
             <h3 className={classNames('font-bold text-4xl text-slate-700')}>
-              Floor Planner and Reservation
+              {project.name}
             </h3>
             <div className='border-b border-slate-400 w-[70%] absolute -left-5 -bottom-2'></div>
             <div className='border-b border-slate-400 w-[90%] absolute left-5 -bottom-4'></div>

@@ -22,9 +22,7 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = ({
             <ProjectItem
               key={i}
               variant={i % 2 === 0 ? 'left-image' : 'right-image'}
-              title={project.name}
-              description={project.description}
-              hashtags={project.tags}
+              project={project}
             />
           ))}
         </Stack>
