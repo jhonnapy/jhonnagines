@@ -14,7 +14,7 @@ const AboutSection: FunctionComponent<AboutSectionProps> = (props) => {
     <Stack className='py-36 space-y-6'>
       <Stack className='space-y-2'>
         <SectionHeading>about</SectionHeading>
-        <p className='text-xl'>
+        <p className='text-xl max-w-screen-md'>
           Experienced since <TextHighlight>2017</TextHighlight>, I am a{' '}
           <TextHighlight>full-stack developer</TextHighlight> who specialize in{' '}
           <TextHighlight>front-end development</TextHighlight> and thrive on

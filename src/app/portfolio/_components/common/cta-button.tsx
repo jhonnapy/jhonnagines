@@ -22,7 +22,7 @@ const CTAButton: FunctionComponent<CTAButtonProps> = ({
 }) => {
   return (
     <div className='relative py-2 px-2'>
-      <div className='absolute top-0 left-0 w-5/6 h-3/6 border-t border-l border-slate-400 pointer-events-none'></div>
+      <div className='absolute top-1 left-1 w-5/6 h-3/6 border-t border-l border-slate-400 pointer-events-none'></div>
       <button
         {...props}
         className={classNames(
@@ -31,7 +31,7 @@ const CTAButton: FunctionComponent<CTAButtonProps> = ({
           bgVariants[variant]
         )}
       ></button>
-      <div className='absolute bottom-0 right-0 w-5/6 h-5/6 border-b border-r border-slate-400 pointer-events-none'></div>
+      <div className='absolute bottom-1 right-1 w-5/6 h-5/6 border-b border-r border-slate-400 pointer-events-none'></div>
     </div>
   );
 };
