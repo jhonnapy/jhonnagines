@@ -12,7 +12,6 @@ export type ProjectsSectionProps = {
 const ProjectsSection: FunctionComponent<ProjectsSectionProps> = ({
   items,
 }) => {
-  console.log({ items });
   return (
     <>
       <Stack className='py-10 space-y-4'>
