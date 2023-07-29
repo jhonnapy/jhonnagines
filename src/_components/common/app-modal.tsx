@@ -47,7 +47,6 @@ const AppModal: FunctionComponent<AppModalProps> = ({
       <Stack
         className={classNames('h-full transition-transform duration-1000')}
         style={{
-          transform: isOpen ? 'translateY(0px)' : 'translateY(100%)',
           maxHeight: '100%',
         }}
       >
