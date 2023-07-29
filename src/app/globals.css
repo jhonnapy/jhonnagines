@@ -31,3 +31,7 @@ body.modal--open {
 * {
   box-sizing: border-box;
 }
+
+.line-break {
+  white-space: pre-wrap;
+}

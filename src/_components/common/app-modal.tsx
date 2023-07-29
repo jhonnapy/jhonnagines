@@ -58,12 +58,7 @@ const AppModal: FunctionComponent<AppModalProps> = ({
             exit
           </button>
         </Row>
-        <div
-          className='w-full bg-main overflow-y-scroll flex-1 shadow-md'
-          style={{ overflowY: 'scroll' }}
-        >
-          {children}
-        </div>
+        <div className='w-full h-full relative bg-main flex-1 shadow-md'>{children}</div>
       </Stack>
     </dialog>
     // <div
