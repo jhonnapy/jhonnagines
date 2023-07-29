@@ -1,25 +1,20 @@
 import contentfulGQLClient from "@/_lib/contentful-graphql";
-import { APIResponse, IAPIResponse } from "@/_utils/api-response";
-import { gql } from "@apollo/client";
-import { IPortfolioItem } from "../_contentful";
 
-const apiClient = contentfulGQLClient();
-
-export async function getPortfolioItems(): Promise<IAPIResponse<IPortfolioItem[]>> {
-  const entries = await apiClient.query({
-    query: gql`
-      query GetPortfolioItems() {
-        portfolioItemCollection() {
-            items {
-              name
-              content
-              description
-              tags
-            }
-        }
+export async function getPortfolioItems() {
+  const query = `
+    query GetAllPortfolioItem {
+      portfolioItemCollection(order: sys_firstPublishedAt_ASC) {
+          items {
+            name
+            content
+            description
+            tags
+          }
       }
-    `
-  })
+    }
+  `;
+  const res = await contentfulGQLClient.query({ query });
+  const { data } = await res.json();
 
-  return APIResponse.ok(entries.data.blogPostCollection.items)
+  return data.portfolioItemCollection.items;
 }
