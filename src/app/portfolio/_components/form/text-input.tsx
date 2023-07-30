@@ -1,17 +1,21 @@
-import React, {
-  FunctionComponent,
-  InputHTMLAttributes,
-} from 'react';
+import classNames from 'classnames';
+import React, { FunctionComponent, InputHTMLAttributes } from 'react';
 
 export type TextInputProps = {
-  // No Props
+  isError?: boolean;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-const TextInput: FunctionComponent<TextInputProps> = (props) => {
+const TextInput: FunctionComponent<TextInputProps> = ({
+  isError,
+  ...props
+}) => {
   return (
     <input
       {...props}
-      className='transition focus:outline-none bg-inherit border-b border-slate-400 focus:border-[#D64545] px-3 py-2'
+      className={classNames(
+        'transition focus:outline-none bg-inherit px-3 py-2 border-b',
+        isError ? 'border-red-500' : 'border-slate-400 focus:border-slate-800'
+      )}
     />
   );
 };

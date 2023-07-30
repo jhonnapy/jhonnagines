@@ -1,11 +1,13 @@
+'use client';
 import React, { FunctionComponent } from 'react';
 import SectionHeading from './common/section-heading';
 import { Inter } from 'next/font/google';
 import classNames from 'classnames';
-import TextInput from './form/text-input';
 import Stack from '@/_components/layouts/stack';
-import CTAButton from './common/cta-button';
 import Row from '@/_components/layouts/row';
+import ContactForm from './form/contact-form';
+import { IContactForm } from '../_forms';
+import useContactForm from '../_hooks/useContactForm';
 
 const interFont = Inter({ subsets: ['latin'] });
 
@@ -14,6 +16,8 @@ export type ContactSectionProps = {
 };
 
 const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
+  const { isLoading: isSubmittingContactForm, handleSubmit, isFinished } = useContactForm();
+
   return (
     <section id='contact'>
       <Row className={classNames('relative w-full h-fit mb-24')}>
@@ -32,24 +36,11 @@ const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
               CONTACT ME
             </h3>
           </div>
-          <form className='relative px-8'>
-            <Stack className='w-[330px] space-y-8'>
-              <Stack className='space-y-4'>
-                <h4 className='text-sm font-medium text-slate-500'>
-                  feel free to contact me and I will get back to you as soon as
-                  I can.
-                </h4>
-                <TextInput placeholder='name' name='name' autoComplete='name' />
-                <TextInput
-                  placeholder='email'
-                  name='email'
-                  autoComplete='email'
-                />
-                <TextInput placeholder='tell me about it' />
-              </Stack>
-              <CTAButton type='submit'>send</CTAButton>
-            </Stack>
-          </form>
+          <ContactForm
+            onSubmit={handleSubmit}
+            isLoading={isSubmittingContactForm}
+            isFinished={isFinished}
+          />
 
           {/* left divider */}
           <div className='absolute left-0 top-0 border-l border-slate-400 h-full z-0'></div>

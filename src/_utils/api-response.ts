@@ -1,3 +1,5 @@
+import { NextApiResponse } from 'next'
+
 export interface IAPIResponse<Data, Error = null | any> {
   ok: boolean;
   data: Data
@@ -18,6 +20,11 @@ function APIResponseError<Data, Error>(error: Error): IAPIResponse<null, Error> 
     error
   }
 }
+
+export function methodNotAllowed(res: NextApiResponse) {
+  return res.status(405).json({ message: 'Method not allowed ' })
+}
+
 
 export const APIResponse = {
   ok: APIResponseOK,

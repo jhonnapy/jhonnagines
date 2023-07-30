@@ -13,9 +13,9 @@
   }
 } */
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -38,4 +38,12 @@ body.modal--open {
 
 .line-break {
   white-space: pre-wrap;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fefaf3 inset !important;
 }

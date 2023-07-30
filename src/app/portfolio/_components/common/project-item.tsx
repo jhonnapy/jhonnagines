@@ -40,7 +40,6 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
 
   const handleOpenDetails = () => setOpenDetails(true);
   const handleCloseDetails = () => setOpenDetails(false);
-  console.log({ project });
 
   return (
     <ProjectItemContext.Provider value={project}>
