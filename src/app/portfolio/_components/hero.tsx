@@ -49,7 +49,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
               <span className='text-slate-700 block md:inline'>PAOLO</span>
               <span className='text-slate-900'>JULIAN</span>
             </h1>
-            <p className='font-medium text-slate-600 text-lg lg:text-xl tracking-[5px] md:tracking-[22.5px] lg:tracking-[28.2px]'>
+            <p className='font-sans font-medium text-slate-600 text-lg lg:text-xl tracking-[5px] md:tracking-[22.5px] lg:tracking-[28.2px]'>
               SOFTWARE ENGINEER
             </p>
           </Stack>

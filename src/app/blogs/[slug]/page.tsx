@@ -18,10 +18,10 @@ const BlogDetails: FunctionComponent<BlogDetailsProps> = async ({ params }) => {
     <Stack className=''>
       <div className='p-8'>
         <Stack className='space-y-12'>
-          <nav className='text-slate-600 flex space-x-2'>
+          <nav className='text-slate-700 flex space-x-2'>
             <Link href={'/blogs'}>blogs</Link>
             <span>{'>'}</span>
-            <span className='text-slate-500'>{blogPost.slug}</span>
+            <span className='text-slate-400'>{blogPost.slug}</span>
           </nav>
           <Stack className='relative pb-8'>
             <p className='text-slate-500 text-sm'>

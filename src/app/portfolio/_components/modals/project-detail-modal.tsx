@@ -50,13 +50,13 @@ const ProjectDetailsModal: FunctionComponent<ProjectDetailsModalProps> = ({
               <div className='border-b border-slate-400 w-[70%] absolute -left-5 -bottom-2'></div>
               <div className='border-b border-slate-400 w-[90%] absolute left-5 -bottom-4'></div>
             </Stack>
-            <Row className='w-full justify-center bg-slate-50'>
+            {/* <Row className='w-full justify-center bg-slate-50'>
               <ProjectImage
                 alt={project.name}
                 src={project.image?.url}
                 hasEffects={false}
               />
-            </Row>
+            </Row> */}
           </Stack>
           <div>
             <AppReactMarkdown>{project.content}</AppReactMarkdown>
