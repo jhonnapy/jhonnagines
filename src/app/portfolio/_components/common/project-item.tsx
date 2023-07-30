@@ -81,12 +81,12 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
               ))}
             </Row>
 
-            <span
+            {/* <span
               onClick={handleOpenDetails}
               className='text-slate-500 text-sm cursor-pointer'
             >
               learn more...
-            </span>
+            </span> */}
           </Stack>
         </Row>
 
