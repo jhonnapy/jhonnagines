@@ -20,14 +20,17 @@ const ProjectImage: FunctionComponent<ProjectImageProps> = ({
       className={classNames(
         'h-[400px] w-[440px] z-0 relative group overflow-hidden',
         dummy ? 'border border-slate-400' : 'bg-slate-50',
-        hasEffects ? 'cursor-pointer': ''
+        hasEffects ? 'cursor-pointer' : '',
+        hasEffects ? 'mix-blend-luminosity' : ''
       )}
     >
       {src ? (
         <Image
           className={classNames(
             'absolute inset-0 left-1/2 -translate-x-1/2',
-            hasEffects ? 'transition md:group-hover:scale-105 md:group-hover:-translate-y-2' : ''
+            hasEffects
+              ? 'transition md:group-hover:scale-105 md:group-hover:-translate-y-2'
+              : ''
           )}
           alt={alt}
           src={src}
