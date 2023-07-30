@@ -14,11 +14,11 @@ export type HeroSectionProps = {
 const contactItems: { title: string; link: string }[] = [
   {
     title: 'facebook',
-    link: '#',
+    link: 'https://www.facebook.com/profile.php?id=100078321445396',
   },
   {
     title: 'linkedin',
-    link: '#',
+    link: 'https://www.linkedin.com/in/pipz/',
   },
   {
     title: 'paolojulian.personal@gmail.com',
@@ -57,7 +57,7 @@ const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
 
         <Row className='justify-between md:justify-normal md:space-x-10'>
           {contactItems.map((item) => (
-            <Link href={item.link} key={item.title}>
+            <Link href={item.link} key={item.title} target="_blank">
               <span className='font-medium text-slate-700 text-sm'>
                 {item.title}
               </span>
