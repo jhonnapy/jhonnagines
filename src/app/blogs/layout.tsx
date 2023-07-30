@@ -21,12 +21,13 @@ export default function PortfolioLayout({
     <>
       <div
         className={classNames(
+          'font-manrope',
           'bg-main max-w-screen-xl mx-auto text-slate-700',
           'relative'
         )}
       >
         <Row>
-          <aside className='sticky top-0 left-0 h-screen border-r border-slate-400 z-30'>
+          <aside className='sticky top-0 left-0 h-screen border-r border-slate-400 z-30 hidden md:block'>
             <nav className='flex flex-col space-y-2 justify-center h-full p-2'>
               <NavIconButton name='Home'>
                 <HomeIcon className='text-slate-700' />

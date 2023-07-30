@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-montserrat)'],
+        manrope: ['var(--font-manrope)'],
       },
       colors: {
         main: '#ECE8E1',
