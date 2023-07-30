@@ -52,7 +52,7 @@ const AppModal: FunctionComponent<AppModalProps> = ({
       >
         <Row className='justify-end'>
           <button
-            className='px-3 py-2 focus:outline-none font-medium text-slate-50'
+            className='px-3 py-2 focus:outline-none text-slate-50'
             onClick={closeModal}
           >
             exit

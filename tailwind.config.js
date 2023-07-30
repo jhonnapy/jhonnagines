@@ -10,6 +10,8 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-montserrat)'],
         manrope: ['var(--font-manrope)'],
+        quicksand: ['var(--font-quicksand)'],
+        raleway: ['var(--font-raleway)'],
       },
       colors: {
         main: '#ECE8E1',

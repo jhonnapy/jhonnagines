@@ -50,8 +50,10 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
             variant === 'left-image' ? 'flex-row' : 'flex-row-reverse'
           )}
         >
-          <div onClick={handleOpenDetails}>
+          <div className='relative p-3' onClick={handleOpenDetails}>
+            <div className='absolute top-0 left-0 w-5/6 h-2/6 border-t border-l border-slate-400 pointer-events-none'></div>
             <ProjectImage alt={project.name} src={project.image?.url} />
+            <div className='absolute bottom-0 right-0 w-5/6 h-2/6 border-b border-r border-slate-400 pointer-events-none'></div>
           </div>
           <Stack
             className={classNames(

@@ -14,9 +14,9 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = ({
 }) => {
   return (
     <>
-      <Stack className='py-10 space-y-4'>
+      <Stack className='py-10 mb-24 space-y-4'>
         <SectionHeading>latest projects</SectionHeading>
-        <Stack className='space-y-8'>
+        <Stack className='space-y-32'>
           {items.map((project, i) => (
             <ProjectItem
               key={i}

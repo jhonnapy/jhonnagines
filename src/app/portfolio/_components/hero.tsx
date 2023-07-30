@@ -29,10 +29,10 @@ const contactItems: { title: string; link: string }[] = [
 const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
   return (
     <Stack className='min-h-screen h-full py-10'>
-      <div className='absolute top-10 right-10'>
+      {/* <div className='absolute top-10 right-10'>
         <div className='absolute right-0 top-2 border-t border-r border-slate-600 h-60 w-60'></div>
         <div className='absolute right-2 top-0 border-t border-r border-slate-600 h-48 w-72'></div>
-      </div>
+      </div> */}
 
       <Stack className='flex-1'>
         <Stack className='flex-1 justify-center'>

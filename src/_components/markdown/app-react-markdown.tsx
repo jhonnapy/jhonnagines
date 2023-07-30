@@ -26,7 +26,6 @@ const AppReactMarkdown: FunctionComponent<AppReactMarkdownProps> = ({
           <CodeBlock className={className || ''}>{children}</CodeBlock>
         ),
       }}
-      remarkPlugins={[remarkGfm]}
       className='line-break'
     >
       {children}

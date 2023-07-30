@@ -23,10 +23,10 @@ const AboutSection: FunctionComponent<AboutSectionProps> = (props) => {
           elegance of simple yet complex designs.
         </p>
       </Stack>
-      <Row className='space-x-4'>
+      <Row className='space-x-8'>
         <CTAButton block={false}>hire me</CTAButton>
         <CTAButton block={false} variant='secondary'>
-          download CV
+          download cv
         </CTAButton>
       </Row>
     </Stack>

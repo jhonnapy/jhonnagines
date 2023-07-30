@@ -1,10 +1,12 @@
 import classNames from 'classnames';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Manrope, Montserrat } from 'next/font/google';
+import { Manrope, Montserrat, Quicksand, Raleway } from 'next/font/google';
 
 const font = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
+const quicksand = Quicksand({ subsets: ['latin'], variable: '--font-quicksand' });
+const raleway = Raleway({ subsets: ['latin'], variable: '--font-raleway' });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,7 +23,9 @@ export default function RootLayout({
       <body
         className={classNames(
           `${font.variable} font-sans`,
-          `${manrope.variable} font-manrope`
+          `${manrope.variable} font-manrope`,
+          `${quicksand.variable} font-quicksand`,
+          `${raleway.variable} font-raleway`
         )}
       >
         {children}

@@ -7,7 +7,7 @@ import Stack from '../layouts/stack';
 import Row from '../layouts/row';
 
 export type CodeBlockProps = {
-  children: React.ReactNode;
+  children: any;
   className: string;
 };
 
@@ -19,8 +19,8 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({
   const [isCopied, setIsCopied] = useState(false);
 
   const copyToClipboard = () => {
-    if (navigator.clipboard && typeof children === 'string') {
-      navigator.clipboard.writeText(children.trim());
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(children.toString().trim());
       setIsCopied(true);
       setTimeout(() => {
         setIsCopied(false);
@@ -31,7 +31,12 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({
   return (
     <Stack className='rounded-lg overflow-hidden space-y-0'>
       <div className='w-full'>
-        <Row className='justify-between text-sm px-4 py-2 bg-slate-900 text-gray-50'>
+        <Row
+          className='justify-between text-sm px-4 py-2 bg-slate-900 text-gray-50'
+          style={{
+            backgroundColor: '#030712',
+          }}
+        >
           <span className='text-gray-300'>{language}</span>
           <button
             className={classNames(
@@ -44,8 +49,8 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({
           >
             <Row className='items-center space-x-2'>
               <svg
-                width='215'
-                height='215'
+                width='24'
+                height='24'
                 viewBox='0 0 215 215'
                 fill='none'
                 className={classNames('w-6 h-6', isCopied ? 'hidden' : '')}
@@ -67,15 +72,43 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({
                   strokeLinejoin='round'
                 />
               </svg>
-              {/* <img
-                src='/assets/icons/copied.svg'
-                alt='clipboard'
-                className={classNames(
-                  isCopied ? '' : 'hidden',
-                  'stroke-white text-white w-6 h-6'
-                )}
-              /> */}
-              {isCopied ? <span>Copied!</span> : <span>Copy Code</span>}
+              <svg
+                width='24'
+                height='24'
+                viewBox='0 0 215 215'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+                className={classNames('w-6 h-6', isCopied ? 'block' : 'hidden')}
+              >
+                <path
+                  opacity='0.4'
+                  d='M207.024 98.5561V56.761C207.024 21.9317 193.093 8 158.263 8H116.468C81.639 8 67.7073 21.9317 67.7073 56.761V67.7073H98.5561C133.385 67.7073 147.317 81.639 147.317 116.468V147.317H158.263C193.093 147.317 207.024 133.385 207.024 98.5561Z'
+                  stroke='#4ade80'
+                  strokeWidth='14.9268'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+                <path
+                  d='M147.317 158.263V116.468C147.317 81.639 133.385 67.7073 98.5561 67.7073H56.761C21.9317 67.7073 8 81.639 8 116.468V158.263C8 193.093 21.9317 207.024 56.761 207.024H98.5561C133.385 207.024 147.317 193.093 147.317 158.263Z'
+                  stroke='#4ade80'
+                  strokeWidth='14.9268'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+                <path
+                  d='M48.6018 137.364L68.0067 156.769L106.717 117.959'
+                  stroke='#4ade80'
+                  strokeWidth='14.9268'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+              </svg>
+
+              {isCopied ? (
+                <span className='text-green-400'>Copied!</span>
+              ) : (
+                <span>Copy Code</span>
+              )}
             </Row>
           </button>
         </Row>
@@ -95,7 +128,7 @@ const CodeBlock: FunctionComponent<CodeBlockProps> = ({
           },
         }}
       >
-        {children}
+        {children as string}
       </SyntaxHighlighter>
     </Stack>
   );
