@@ -27,7 +27,7 @@ const AboutSection: FunctionComponent<AboutSectionProps> = ({
       <Stack className='py-36 space-y-6'>
         <Stack className='space-y-2'>
           <SectionHeading>about</SectionHeading>
-          <Stack className='space-y-12'>
+          <Stack className='space-y-24'>
             <p className='text-xl max-w-screen-md'>
               With <TextHighlight>{yearsOfExperience}</TextHighlight> years of
               experience, I am a seasoned{' '}
@@ -36,25 +36,23 @@ const AboutSection: FunctionComponent<AboutSectionProps> = ({
               passion lies in coding, and I take great pleasure in creating
               captivating user experiences.
             </p>
-            <Stack className='space-y-12'>
-              <p className='text-xl ml-auto max-w-screen-md text-right'>
-                As time has passed, I have embraced a simpler and more{' '}
-                <TextHighlight>minimalist</TextHighlight> approach. I firmly
-                believe that in app and system development, complexity should be
-                avoided, and simplicity should be prioritized for better
-                results.
-              </p>
-              <Row className='space-x-8 justify-end'>
-                <Link href={'/portfolio#contact'}>
-                  <CTAButton block={false}>let&lsquo;s talk</CTAButton>
-                </Link>
-                <Link href={resumeLink} target='_blank'>
-                  <CTAButton block={false} variant='secondary'>
-                    view cv
-                  </CTAButton>
-                </Link>
-              </Row>
-            </Stack>
+
+            <p className='text-xl ml-auto max-w-screen-md text-right'>
+              As time has passed, I have embraced a simpler and more{' '}
+              <TextHighlight>minimalist</TextHighlight> approach. I firmly
+              believe that in app and system development, complexity should be
+              avoided, and simplicity should be prioritized for better results.
+            </p>
+            <Row className='space-x-8 justify-end'>
+              <Link href={'/portfolio#contact'}>
+                <CTAButton block={false}>let&lsquo;s talk</CTAButton>
+              </Link>
+              <Link href={resumeLink} target='_blank'>
+                <CTAButton block={false} variant='secondary'>
+                  view cv
+                </CTAButton>
+              </Link>
+            </Row>
           </Stack>
         </Stack>
       </Stack>

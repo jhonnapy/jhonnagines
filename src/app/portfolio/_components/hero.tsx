@@ -26,27 +26,26 @@ const contactItems: { title: string; link: string }[] = [
   },
 ];
 
+const NavLink = ({
+  name,
+  ...props
+}: React.ComponentProps<typeof Link> & { name: string }) => (
+  <li className='md:hover:text-red-400'>
+    <Link {...props}>{name}</Link>
+  </li>
+);
+
 const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
   return (
     <Stack className='min-h-screen h-full py-10'>
       <Row className='justify-end'>
         <nav>
           <ul className='flex space-x-8'>
-            <li>
-              <Link href='/portfolio#about'>about</Link>
-            </li>
-            <li>
-              <Link href='/portfolio#projects'>projects</Link>
-            </li>
-            <li>
-              <Link href='/portfolio#contact'>contact</Link>
-            </li>
-            <li>
-              <Link href='/blogs'>components</Link>
-            </li>
-            <li>
-              <Link href='/blogs'>blogs</Link>
-            </li>
+            <NavLink name='about' href='/portfolio#about' />
+            <NavLink name='projects' href='/portfolio#projects' />
+            <NavLink name='contact' href='/portfolio#contact' />
+            <NavLink name='components' href='/blogs' />
+            <NavLink name='blogs' href='/blogs' />
           </ul>
         </nav>
       </Row>
@@ -72,13 +71,16 @@ const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
           </Stack>
         </Stack>
 
-        <Row className='justify-between md:justify-normal md:space-x-10'>
+        <ol className='flex justify-between md:justify-normal md:space-x-10'>
           {contactItems.map((item) => (
-            <Link href={item.link} key={item.title} target='_blank'>
-              <span className='text-slate-700'>{item.title}</span>
-            </Link>
+            <NavLink
+              href={item.link}
+              key={item.title}
+              name={item.title}
+              target='_blank'
+            />
           ))}
-        </Row>
+        </ol>
       </Stack>
     </Stack>
   );
