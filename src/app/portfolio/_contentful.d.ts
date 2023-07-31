@@ -7,3 +7,9 @@ export interface IPortfolioItem {
   }
   tags: string[]
 }
+
+export interface IPortfolio {
+  resume: {
+    url: string;
+  }
+}

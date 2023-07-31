@@ -13,9 +13,9 @@
   }
 } */
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 body {
   color: rgb(var(--foreground-rgb));

@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'images.ctfassets.net',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.ctfassets.net',
+        port: '',
+      },
     ],
   },
 };
