@@ -6,16 +6,16 @@ import CTAButton from './common/cta-button';
 import Row from '@/_components/layouts/row';
 import dayjs from 'dayjs';
 import Link from 'next/link';
+import { IPortfolio } from '../_contentful';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 export type AboutSectionProps = {
-  resumeLink?: string;
+  portfolio: IPortfolio;
 };
 
 const yearStarted = 2017;
 
-const AboutSection: FunctionComponent<AboutSectionProps> = ({
-  resumeLink = 'https://assets.ctfassets.net/zbie7myv07fw/5QFI8S6JmGV7Yz7G54a5kM/40515f38a537364b1da70538a138fcd5/Resume__1_.pdf',
-}) => {
+const AboutSection: FunctionComponent<AboutSectionProps> = ({ portfolio }) => {
   const currentYear = dayjs().year();
   const yearsOfExperience = useMemo(
     () => currentYear - yearStarted,
@@ -27,8 +27,20 @@ const AboutSection: FunctionComponent<AboutSectionProps> = ({
       <Stack className='py-36 space-y-6'>
         <Stack className='space-y-2'>
           <SectionHeading>about</SectionHeading>
-          <Stack className='space-y-24'>
-            <p className='text-xl max-w-screen-md'>
+          <Stack className='space-y-12'>
+            <div className='max-w-screen-md text-xl'>
+              <ReactMarkdown
+                components={{
+                  strong: ({ children }) => (
+                    <TextHighlight>{children}</TextHighlight>
+                  ),
+                }}
+                className='line-break'
+              >
+                {portfolio.about}
+              </ReactMarkdown>
+            </div>
+            {/* <p className='text-xl max-w-screen-md'>
               With <TextHighlight>{yearsOfExperience}</TextHighlight> years of
               experience, I am a seasoned{' '}
               <TextHighlight>full-stack developer</TextHighlight> with a focus
@@ -37,17 +49,17 @@ const AboutSection: FunctionComponent<AboutSectionProps> = ({
               captivating user experiences.
             </p>
 
-            <p className='text-xl ml-auto max-w-screen-md text-right'>
+            <p className='text-xl max-w-screen-md'>
               As time has passed, I have embraced a simpler and more{' '}
               <TextHighlight>minimalist</TextHighlight> approach. I firmly
               believe that in app and system development, complexity should be
               avoided, and simplicity should be prioritized for better results.
-            </p>
-            <Row className='space-x-8 justify-end'>
+            </p> */}
+            <Row className='space-x-8'>
               <Link href={'/portfolio#contact'}>
                 <CTAButton block={false}>let&lsquo;s talk</CTAButton>
               </Link>
-              <Link href={resumeLink} target='_blank'>
+              <Link href={portfolio.resume.url} target='_blank'>
                 <CTAButton block={false} variant='secondary'>
                   view cv
                 </CTAButton>

@@ -19,9 +19,9 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = async () => {
   return (
     <>
       <HeroSection />
-      <AboutSection resumeLink={portfolio.resume.url} />
+      <AboutSection portfolio={portfolio} />
       <ProjectsSection items={portfolioItems} />
-      <ContactSection />
+      <ContactSection portfolio={portfolio} />
     </>
   );
 };

@@ -6,16 +6,18 @@ import classNames from 'classnames';
 import Stack from '@/_components/layouts/stack';
 import Row from '@/_components/layouts/row';
 import ContactForm from './form/contact-form';
-import { IContactForm } from '../_forms';
 import useContactForm from '../_hooks/useContactForm';
+import { IPortfolio } from '../_contentful';
 
 const interFont = Inter({ subsets: ['latin'] });
 
 export type ContactSectionProps = {
-  // No Props
+  portfolio: IPortfolio;
 };
 
-const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
+const ContactSection: FunctionComponent<ContactSectionProps> = ({
+  portfolio,
+}) => {
   const {
     isLoading: isSubmittingContactForm,
     handleSubmit,
@@ -25,7 +27,9 @@ const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
   return (
     <section id='contact'>
       <Row
-        className={classNames('relative w-full max-w-screen-lg mx-auto h-fit mb-24')}
+        className={classNames(
+          'relative w-full max-w-screen-lg mx-auto h-fit mb-24'
+        )}
       >
         {/* top divider */}
         <div className='absolute top-0 left-0 border-t border-slate-400 w-[105%]'></div>
@@ -60,26 +64,25 @@ const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
               <h4 className='text-sm font-medium text-slate-500/70 mb-1'>
                 availability
               </h4>
-              <p>Monday - Friday</p>
-              <p>9AM - 6PM</p>
-              <p>Weekends</p>
-              <p>Emails only</p>
+              {portfolio.availability.map((item, i) => (
+                <p key={i}>{item}</p>
+              ))}
             </Stack>
             <Stack className='text-slate-600'>
               <h4 className='text-sm font-medium text-slate-500/70 mb-1'>
                 address
               </h4>
-              <p>Upper Dagsian</p>
-              <p>Baguio City</p>
-              <p>Philippines</p>
-              <p>2600</p>
+              {portfolio.address.map((item, i) => (
+                <p key={i}>{item}</p>
+              ))}
             </Stack>
             <Stack className='text-slate-600'>
               <h4 className='text-sm font-medium text-slate-500/70 mb-1'>
                 support
               </h4>
-              <p>paolojulian.personal@gmail.com</p>
-              <p>(+63) 927 948 8654</p>
+              {portfolio.support.map((item, i) => (
+                <p key={i}>{item}</p>
+              ))}
             </Stack>
           </Stack>
           <footer>

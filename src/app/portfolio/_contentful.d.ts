@@ -9,6 +9,10 @@ export interface IPortfolioItem {
 }
 
 export interface IPortfolio {
+  address: string[];
+  availability: string[];
+  support: string[];
+  about: string;
   resume: {
     url: string;
   }

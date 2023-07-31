@@ -8,6 +8,10 @@ export async function getPortfolio() {
     query GetPortfolio {
       portfolioCollection(limit: 1) {
           items {
+            about
+            address
+            availability
+            support
             resume {
               url
             }
