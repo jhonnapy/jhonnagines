@@ -62,16 +62,24 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
           >
             <div
               className={classNames(
-                'cursor-pointer',
+                // 'cursor-pointer',
                 variant === 'left-image' ? '-ml-16' : '-mr-16 text-right'
               )}
-              onClick={handleOpenDetails}
+              // onClick={handleOpenDetails}
             >
               <ProjectTitle>{project.name}</ProjectTitle>
             </div>
             <p className='text-base text-slate-500'>{project.description}</p>
 
-            <Row
+            <div>
+              <button
+                className='text-left text-sm font-medium text-slate-600 md:hover:text-red-400 md:hover:scale-[1.02] italic'
+                onClick={handleOpenDetails}
+              >
+                SEE MORE &gt;
+              </button>
+            </div>
+            {/* <Row
               className={classNames(
                 'space-x-2 flex-wrap',
                 variant === 'left-image' ? 'text-left' : 'justify-end'
@@ -80,7 +88,7 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = ({
               {project.tags.map((tag) => (
                 <HashTag key={tag}>{tag}</HashTag>
               ))}
-            </Row>
+            </Row> */}
 
             {/* <span
               onClick={handleOpenDetails}

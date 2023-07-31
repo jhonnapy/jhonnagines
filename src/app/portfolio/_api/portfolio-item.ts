@@ -1,4 +1,6 @@
 import contentfulGQLClient from "@/_lib/contentful-graphql";
+import { NotFoundError } from "@/_utils/error-handler";
+import { redirect } from "next/navigation";
 
 export async function getPortfolioItems() {
   const query = `
@@ -16,8 +18,20 @@ export async function getPortfolioItems() {
       }
     }
   `;
-  const res = await contentfulGQLClient.query({ query });
-  const { data } = await res.json();
+  try {
+    const res = await contentfulGQLClient.query({ query });
+    if (!res.ok) {
+      if (res.status === 404) {
+        throw new NotFoundError();
+      }
+      throw res
+    }
+    const { data } = await res.json();
+    return data.portfolioItemCollection.items;
+  } catch (e) {
+    console.error(e);
 
-  return data.portfolioItemCollection.items;
+    redirect('/404')
+  }
+
 }
