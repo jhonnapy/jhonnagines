@@ -16,11 +16,17 @@ export type ContactSectionProps = {
 };
 
 const ContactSection: FunctionComponent<ContactSectionProps> = (props) => {
-  const { isLoading: isSubmittingContactForm, handleSubmit, isFinished } = useContactForm();
+  const {
+    isLoading: isSubmittingContactForm,
+    handleSubmit,
+    isFinished,
+  } = useContactForm();
 
   return (
     <section id='contact'>
-      <Row className={classNames('relative w-full h-fit mb-24')}>
+      <Row
+        className={classNames('relative w-full max-w-screen-lg mx-auto h-fit mb-24')}
+      >
         {/* top divider */}
         <div className='absolute top-0 left-0 border-t border-slate-400 w-[105%]'></div>
 
