@@ -13,16 +13,16 @@ export type HeroSectionProps = {
 
 const contactItems: { title: string; link: string }[] = [
   {
-    title: 'facebook',
-    link: 'https://www.facebook.com/profile.php?id=100078321445396',
+    title: 'jhonnagines@gmail.com',
+    link: 'mailto:jhonnagines@gmail.com',
   },
   {
     title: 'linkedin',
-    link: 'https://www.linkedin.com/in/pipz/',
+    link: 'https://ph.linkedin.com/in/jhonna-mae-gines-06a8861a6',
   },
   {
-    title: 'paolojulian.personal@gmail.com',
-    link: 'mailto:paolojulian.personal@gmail.com',
+    title: '(+63) 997 971 3468',
+    link: 'tel:+63-997-971-3468',
   },
 ];
 
@@ -44,8 +44,8 @@ const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
             <NavLink name='about' href='/portfolio#about' />
             <NavLink name='projects' href='/portfolio#projects' />
             <NavLink name='contact' href='/portfolio#contact' />
-            <NavLink name='components' href='/blogs' />
-            <NavLink name='blogs' href='/blogs' />
+            {/* <NavLink name='components' href='/blogs' />
+            <NavLink name='blogs' href='/blogs' /> */}
           </ul>
         </nav>
       </Row>
@@ -62,11 +62,13 @@ const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
                 'font-black text-[80px] lg:text-[96px] leading-[1]'
               )}
             >
-              <span className='text-slate-700 block md:inline'>PAOLO</span>
-              <span className='text-slate-900'>JULIAN</span>
+              <span className='text-slate-900 block md:inline tracking-[5px]'>
+                JHONNA
+              </span>
+              {/* <span className='text-slate-900'>GINES</span> */}
             </h1>
-            <p className='font-sans font-medium text-slate-600 text-lg lg:text-xl tracking-[5px] md:tracking-[22.5px] lg:tracking-[28.2px]'>
-              SOFTWARE ENGINEER
+            <p className='font-sans font-medium text-slate-600 text-lg lg:text-xl tracking-[5px] md:tracking-[22.5px] lg:tracking-[22.5px]'>
+              UI/UX Designer
             </p>
           </Stack>
         </Stack>

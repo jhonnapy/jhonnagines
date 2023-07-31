@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Paolo Julian',
-  description: 'Paolo Vincent Julian portfolio website',
+  title: 'Jhonna Gines',
+  description: 'Jhonna Mae Gines portfolio website',
 };
 
 export default function PortfolioLayout({

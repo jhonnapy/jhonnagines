@@ -87,7 +87,7 @@ const ContactSection: FunctionComponent<ContactSectionProps> = ({
           </Stack>
           <footer>
             <p className='text-sm text-slate-500'>
-              Copyright @ 2017-2023 Paolo Vincent Julian.
+              Copyright @ 2023 Jhonna Mae Gines.
               <br />
               All rights reserved.
             </p>

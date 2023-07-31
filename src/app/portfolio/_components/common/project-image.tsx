@@ -21,7 +21,7 @@ const ProjectImage: FunctionComponent<ProjectImageProps> = ({
         'h-[400px] w-[440px] z-0 relative group overflow-hidden',
         dummy ? 'border border-slate-400' : 'bg-slate-50',
         hasEffects ? 'cursor-pointer' : '',
-        hasEffects ? 'mix-blend-luminosity' : ''
+        // hasEffects ? 'mix-blend-luminosity' : ''
       )}
     >
       {src ? (
