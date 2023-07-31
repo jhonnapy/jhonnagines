@@ -15,7 +15,7 @@ export default function PortfolioLayout({
   return (
     <div
       className={classNames(
-        'font-quicksand bg-main max-w-screen-lg mx-auto text-slate-700'
+        'font-quicksand bg-main xl:max-w-screen-xl max-w-screen-lg mx-auto text-slate-700'
       )}
     >
       {children}

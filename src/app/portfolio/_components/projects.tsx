@@ -13,7 +13,7 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = ({
   items,
 }) => {
   return (
-    <>
+    <section id="projects">
       <Stack className='py-10 mb-24 space-y-4'>
         <SectionHeading>latest projects</SectionHeading>
         <Stack className='space-y-32'>
@@ -26,7 +26,7 @@ const ProjectsSection: FunctionComponent<ProjectsSectionProps> = ({
           ))}
         </Stack>
       </Stack>
-    </>
+    </section>
   );
 };
 

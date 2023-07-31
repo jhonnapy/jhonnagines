@@ -23,39 +23,42 @@ const AboutSection: FunctionComponent<AboutSectionProps> = ({
   );
 
   return (
-    <Stack className='py-36 space-y-6'>
-      <Stack className='space-y-2'>
-        <SectionHeading>about</SectionHeading>
-        <Stack className='space-y-12'>
-          <p className='text-xl max-w-screen-md'>
-            With <TextHighlight>{yearsOfExperience}</TextHighlight> years of
-            experience, I am a seasoned{' '}
-            <TextHighlight>full-stack developer</TextHighlight> with a focus on{' '}
-            <TextHighlight>front-end development</TextHighlight>. My passion
-            lies in coding, and I take great pleasure in creating captivating
-            user experiences.
-          </p>
+    <section id='about'>
+      <Stack className='py-36 space-y-6'>
+        <Stack className='space-y-2'>
+          <SectionHeading>about</SectionHeading>
           <Stack className='space-y-12'>
-            <p className='text-xl ml-auto max-w-screen-md text-right'>
-              As time has passed, I have embraced a simpler and more{' '}
-              <TextHighlight>minimalist</TextHighlight> approach. I firmly
-              believe that in app and system development, complexity should be
-              avoided, and simplicity should be prioritized for better results.
+            <p className='text-xl max-w-screen-md'>
+              With <TextHighlight>{yearsOfExperience}</TextHighlight> years of
+              experience, I am a seasoned{' '}
+              <TextHighlight>full-stack developer</TextHighlight> with a focus
+              on <TextHighlight>front-end development</TextHighlight>. My
+              passion lies in coding, and I take great pleasure in creating
+              captivating user experiences.
             </p>
-            <Row className='space-x-8 justify-end'>
-              <Link href={'/portfolio#contact'}>
-                <CTAButton block={false}>let&lsquo;s talk</CTAButton>
-              </Link>
-              <Link href={resumeLink} target='_blank'>
-                <CTAButton block={false} variant='secondary'>
-                  view cv
-                </CTAButton>
-              </Link>
-            </Row>
+            <Stack className='space-y-12'>
+              <p className='text-xl ml-auto max-w-screen-md text-right'>
+                As time has passed, I have embraced a simpler and more{' '}
+                <TextHighlight>minimalist</TextHighlight> approach. I firmly
+                believe that in app and system development, complexity should be
+                avoided, and simplicity should be prioritized for better
+                results.
+              </p>
+              <Row className='space-x-8 justify-end'>
+                <Link href={'/portfolio#contact'}>
+                  <CTAButton block={false}>let&lsquo;s talk</CTAButton>
+                </Link>
+                <Link href={resumeLink} target='_blank'>
+                  <CTAButton block={false} variant='secondary'>
+                    view cv
+                  </CTAButton>
+                </Link>
+              </Row>
+            </Stack>
           </Stack>
         </Stack>
       </Stack>
-    </Stack>
+    </section>
   );
 };
 

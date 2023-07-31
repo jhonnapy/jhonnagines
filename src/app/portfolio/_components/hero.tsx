@@ -29,10 +29,27 @@ const contactItems: { title: string; link: string }[] = [
 const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
   return (
     <Stack className='min-h-screen h-full py-10'>
-      {/* <div className='absolute top-10 right-10'>
-        <div className='absolute right-0 top-2 border-t border-r border-slate-600 h-60 w-60'></div>
-        <div className='absolute right-2 top-0 border-t border-r border-slate-600 h-48 w-72'></div>
-      </div> */}
+      <Row className='justify-end'>
+        <nav>
+          <ul className='flex space-x-8'>
+            <li>
+              <Link href='/portfolio#about'>about</Link>
+            </li>
+            <li>
+              <Link href='/portfolio#projects'>projects</Link>
+            </li>
+            <li>
+              <Link href='/portfolio#contact'>contact</Link>
+            </li>
+            <li>
+              <Link href='/blogs'>components</Link>
+            </li>
+            <li>
+              <Link href='/blogs'>blogs</Link>
+            </li>
+          </ul>
+        </nav>
+      </Row>
 
       <Stack className='flex-1'>
         <Stack className='flex-1 justify-center'>
@@ -57,10 +74,8 @@ const HeroSection: FunctionComponent<HeroSectionProps> = (props) => {
 
         <Row className='justify-between md:justify-normal md:space-x-10'>
           {contactItems.map((item) => (
-            <Link href={item.link} key={item.title} target="_blank">
-              <span className='font-medium text-slate-700 text-sm'>
-                {item.title}
-              </span>
+            <Link href={item.link} key={item.title} target='_blank'>
+              <span className='text-slate-700'>{item.title}</span>
             </Link>
           ))}
         </Row>
